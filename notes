@@ -1,0 +1,4 @@
+1. install all prerequisete
+2. create a folder with files and secrets
+3. talisman will not allow the move ahead.
+4. To ignore the file vi .talismanrc
