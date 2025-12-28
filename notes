@@ -1,4 +1,27 @@
+For talisman demo:
 1. install all prerequisete
 2. create a folder with files and secrets
 3. talisman will not allow the move ahead.
 4. To ignore the file vi .talismanrc
+
+------------------------------------------------------
+
+For mutation testing:
+1. install all prereiuiste
+2. intsall this pulgins -> sonar quality gates, sonar scanner for jenkins, coverage, jacaco, pitmutation, git, junit, pipeline-utility-steps, pipeline-maven
+3. PIT (PITEST) is a mutation testing tool for Java that helps assess how good your unit tests are.
+4. run mutation test : mvn org.pitest:pitest-maven:mutationCoverage
+5. View the reports in target/pit-reports/YYYYMMDDHHMI/index.html
+
+------------------------------------------------------------------------------------------
+
+For sonarquebe , trivy demo:
+1. install all prereiuiste
+2. intsall this pulgins -> sonar quality gates, sonar scanner for jenkins
+3. in sonarqube add this webhook --> jenkins - http://3.3.3.3:8080/sonarqube-webhook
+4. Genarate a token in sonarqube
+4. In jenkins-->tool -> add sonarqube url http://3.3.3.3:9000/
+5. in jenkins--> add sonarqube credentials
+6. 
+
+
