@@ -29,14 +29,8 @@ pipeline {
         stage('SonarQube Scan') {
             steps {
                 withEnv(["SONAR_AUTH_TOKEN=${credentials('sonar-token')}"]) {
-                    sh """
-                        sonar-scanner \
-                        -Dsonar.projectKey=devsecops-node \
-                        -Dsonar.projectName=devsecops-node \
-                        -Dsonar.sources=src \
-                        -Dsonar.tests=test \
-                        -Dsonar.login=${SONAR_AUTH_TOKEN}
-                    """
+                    sh "sonar-scanner -Dsonar.projectKey=devsecops-node -Dsonar.projectName=devsecops-node -Dsonar.sources=src -Dsonar.tests=test -Dsonar.login=${SONAR_AUTH_TOKEN}"
+
                 }
             }
         }
