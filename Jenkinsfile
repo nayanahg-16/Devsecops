@@ -5,7 +5,7 @@ pipeline {
     jdk 'jdk17'
     maven 'maven3'
     nodejs "nodejs"
-    sonarQube 'sonar-scanner'
+    sonarScanner 'sonar-scanner'
   }
 
   environment {
