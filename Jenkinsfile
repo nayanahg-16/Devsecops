@@ -19,10 +19,12 @@ pipeline {
     }
 
     stage('Build & Test') {
-      steps {
-        sh 'mvn clean test package'
-      }
-    }
+  steps {
+    sh 'npm install'
+    sh 'npm test'
+  }
+}
+
 
     stage('SonarQube Scan') {
       steps {
