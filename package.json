@@ -1,0 +1,19 @@
+{
+  "name": "devops-sample-app",
+  "version": "1.0.0",
+  "description": "Sample Node.js app for CI/CD with Jenkins, Docker, SonarQube",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.4",
+    "eslint": "^8.57.0"
+  }
+}
