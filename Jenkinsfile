@@ -13,7 +13,7 @@ pipeline {
 
     stage('Checkout') {
       steps {
-        git 'https://github.com/yourname/sample-app.git'
+        git 'https://github.com/nayanahg-16/Devsecops.git'
       }
     }
 
