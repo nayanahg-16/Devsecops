@@ -29,12 +29,19 @@ pipeline {
 
 
     stage('SonarQube Scan') {
-      steps {
+    steps {
         withSonarQubeEnv('sonar-server') {
-          sh 'sonar-scanner'
+            sh '''
+              sonar-scanner \
+              -Dsonar.projectKey=devsecops-node \
+              -Dsonar.projectName=devsecops-node \
+              -Dsonar.sources=src \
+              -Dsonar.tests=test
+            '''
         }
-      }
     }
+}
+
 
     stage('Quality Gate') {
       steps {
